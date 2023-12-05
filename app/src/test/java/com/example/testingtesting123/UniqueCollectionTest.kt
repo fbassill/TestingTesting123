@@ -45,13 +45,13 @@ class UniqueCollectionTest {
     @Test
     fun removeItem() {
         collection.addItem(Item("item1"))
-        collection.addItem(Item("Item2"))
-        collection.addItem(Item("Item3"))
+        collection.addItem(Item("item2"))
+        collection.addItem(Item("item3"))
 
         collection.remove(Item("item2"))
         collection.remove(Item("item4"))
 
-        assert(collection.size() == 2 && collection.get(0) == Item("item1") && collection.get(1) == Item("item3"))
+        assert(collection.size() == 2 && collection.get(0) == Item("item1") && collection.get(1) == Item("item3")) {"Items not Removed Correctly"}
 
     }
 
